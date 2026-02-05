@@ -1,4 +1,4 @@
-# SV-MedVision Pro 🏥
+# SV-MedVision Pro: Agentic Multi-modal Grounding for Autonomous Radiology 🏥
 ### Advanced Multi-Agent Clinical Diagnostic System
 
 **Developed by: Rashedul Albab**  

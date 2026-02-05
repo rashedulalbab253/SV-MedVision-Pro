@@ -1,5 +1,5 @@
 # Project Report: SV-MedVision Pro 🏥
-### Advanced Multi-Agent Autonomous Diagnostic Imaging System
+### Agentic Multi-modal Grounding for Autonomous Radiology
 
 **Developer:** Rashedul Albab  
 **Date:** February 5, 2026  
