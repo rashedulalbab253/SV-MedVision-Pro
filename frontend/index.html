@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SV-MedVision Pro | Advanced AI Diagnostics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <i class="fa-solid fa-microscope logo-icon"></i>
+                <h1>SV-MedVision<span>PRO</span></h1>
+            </div>
+            
+            <nav class="nav-menu">
+                <div class="nav-item active">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <span>Dashboard</span>
+                </div>
+            </nav>
+
+            <div class="config-panel">
+                <h3><i class="fa-solid fa-sliders"></i> Configuration</h3>
+                <div class="input-group">
+                    <label>Groq API Key</label>
+                    <input type="password" id="apiKey" placeholder="Enter your key...">
+                    <small>Required for AI Analysis</small>
+                </div>
+                <div class="input-group">
+                    <label>AI Model</label>
+                    <select id="modelSelect">
+                        <option value="meta-llama/llama-4-scout-17b-16e-instruct">Llama 4 Scout (17B)</option>
+                        <option value="meta-llama/llama-4-maverick-17b-128e-instruct">Llama 4 Maverick (17B)</option>
+                        <option value="llama-3.2-11b-vision-preview">Llama 3.2 (11B)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Diagnostic Focus</label>
+                    <select id="focusSelect">
+                        <option value="Lung Parenchyma">Lung Parenchyma</option>
+                        <option value="Cardiomegaly">Cardiomegaly</option>
+                        <option value="Orthopedic/Fracture">Orthopedic/Fracture</option>
+                        <option value="Neurological">Neurological</option>
+                    </select>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="status-badge">
+                    <span class="pulse"></span>
+                    System Online
+                </div>
+                <div class="user-info">
+                    <span>Clinical Research Mode</span>
+                </div>
+            </header>
+
+            <section class="workspace">
+                <div class="left-pane">
+                    <div class="card upload-card">
+                        <h2><i class="fa-solid fa-cloud-arrow-up"></i> Data Acquisition</h2>
+                        <div class="drop-zone" id="dropZone">
+                            <input type="file" id="fileInput" hidden accept="image/*">
+                            <i class="fa-solid fa-file-medical"></i>
+                            <p>Drag medical scan here or <span>browse</span></p>
+                            <img id="imagePreview" class="hidden">
+                        </div>
+                        <button id="analyzeBtn" class="primary-btn" disabled>
+                            <i class="fa-solid fa-wand-sparkles"></i> Execute Diagnostics
+                        </button>
+                    </div>
+
+                    <div class="card metrics-card hidden" id="metricsCard">
+                        <div class="metric">
+                            <span class="label">AI Confidence</span>
+                            <span class="value" id="confidenceValue">--%</span>
+                            <div class="progress-bar"><div class="fill" id="confidenceFill"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-pane">
+                    <div class="card report-card">
+                        <div class="card-header">
+                            <h2><i class="fa-solid fa-file-invoice"></i> Diagnostic Report</h2>
+                            <button id="downloadBtn" class="secondary-btn hidden">
+                                <i class="fa-solid fa-download"></i> PDF
+                            </button>
+                        </div>
+                        <div id="reportContent" class="report-body">
+                            <div class="placeholder">
+                                <i class="fa-solid fa-hourglass-start"></i>
+                                <p>Awaiting scan upload and analysis...</p>
+                            </div>
+                        </div>
+                        <div id="loader" class="loader-container hidden">
+                            <div class="spinner"></div>
+                            <p>Agents Collaborating...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
