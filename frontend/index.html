@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <div class="app-container">
         <!-- Sidebar -->
@@ -16,7 +18,7 @@
                 <i class="fa-solid fa-microscope logo-icon"></i>
                 <h1>SV-MedVision<span>PRO</span></h1>
             </div>
-            
+
             <nav class="nav-menu">
                 <div class="nav-item active">
                     <i class="fa-solid fa-gauge-high"></i>
@@ -49,6 +51,10 @@
                     </select>
                 </div>
             </div>
+
+            <div class="developer-credit">
+                <p>Developed by <span>Rashedul Albab</span></p>
+            </div>
         </aside>
 
         <!-- Main Content -->
@@ -59,7 +65,8 @@
                     System Online
                 </div>
                 <div class="user-info">
-                    <span>Clinical Research Mode</span>
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span>Developed by <strong>Rashedul Albab</strong></span>
                 </div>
             </header>
 
@@ -82,7 +89,9 @@
                         <div class="metric">
                             <span class="label">AI Confidence</span>
                             <span class="value" id="confidenceValue">--%</span>
-                            <div class="progress-bar"><div class="fill" id="confidenceFill"></div></div>
+                            <div class="progress-bar">
+                                <div class="fill" id="confidenceFill"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,4 +121,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

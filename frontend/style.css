@@ -109,7 +109,8 @@ body {
     text-transform: uppercase;
 }
 
-.input-group input, .input-group select {
+.input-group input,
+.input-group select {
     width: 100%;
     background: #0a0b0d;
     border: 1px solid var(--border);
@@ -123,6 +124,21 @@ body {
     display: block;
     font-size: 0.65rem;
     color: var(--accent);
+    margin-top: 4px;
+}
+
+.developer-credit {
+    margin-top: auto;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+.developer-credit span {
+    color: var(--accent);
+    font-weight: 600;
+    display: block;
     margin-top: 4px;
 }
 
@@ -161,9 +177,17 @@ body {
 }
 
 @keyframes blink {
-    0% { opacity: 0.4; }
-    50% { opacity: 1; }
-    100% { opacity: 0.4; }
+    0% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
 }
 
 .workspace {
@@ -277,7 +301,7 @@ body {
 
 .report-body {
     flex-grow: 1;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     padding: 1.5rem;
     overflow-y: auto;
@@ -297,6 +321,23 @@ body {
 
 .placeholder i {
     font-size: 2.5rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.user-info i {
+    color: var(--accent);
+}
+
+.user-info strong {
+    color: var(--accent);
+    font-weight: 600;
 }
 
 .hidden {
@@ -323,15 +364,27 @@ body {
 }
 
 @keyframes spin {
-    100% { transform: rotate(360deg); }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .metric {
     margin-top: 1rem;
 }
 
-.metric .label { font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 4px;}
-.metric .value { font-size: 1.5rem; font-weight: 700; color: var(--accent);}
+.metric .label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.metric .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+}
 
 .progress-bar {
     width: 100%;
