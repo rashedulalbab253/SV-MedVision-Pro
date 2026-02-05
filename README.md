@@ -43,5 +43,6 @@ docker pull rashedulalbab1234/sv-medvision-pro:latest
 docker run -p 8000:8000 rashedulalbab1234/sv-medvision-pro:latest
 ```
 
----
-*PhD Level Portfolio Project | Research Interest: Multi-modal AI & Clinical Safety.*
+--
+
+Research Interest: Multi-modal AI & Clinical Safety.*
